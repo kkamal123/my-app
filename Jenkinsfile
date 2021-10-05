@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('---clean---') {
             steps {
-                Sh "man clean"
+                Sh "mvn clean"
             }
         }
         stage('---test---') {
             steps {
-                Sh "man test"
+                Sh "mvn test"
             }
         }
         stage('---package---') {
             steps {
-                Sh "man package"
+                Sh "mvn package"
             }
         }
     }
